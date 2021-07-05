@@ -1,0 +1,15 @@
+@use '../abstracts/colors' as *;
+
+.header-text {
+  &__main {
+    margin: 2.25rem;
+    text-align: center;
+    em {
+      font-style: normal;
+      color: $secondary-color;
+    }
+  }
+  &__side {
+    text-align: center;
+  }
+}

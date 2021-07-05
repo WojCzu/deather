@@ -1,0 +1,23 @@
+@use './header-text';
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+
+  &__image {
+    width: calc(100vw / 2 - 1.2rem);
+    height: 50vw;
+    display: inline-block;
+    &--left {
+      background-color: red;
+    }
+    &--right {
+      background-color: rebeccapurple;
+    }
+  }
+  &__content {
+    order: 1;
+  }
+}
