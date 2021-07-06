@@ -1,19 +1,7 @@
 .header {
-  min-height: 100vh;
-  padding: 2rem 0;
-  position: relative;
-  &__logo {
-    justify-content: center;
-    margin: 0 2rem;
-  }
-  &__scroll-down {
-    position: absolute;
-    left: 50%;
-    bottom: 2rem;
-    transform: translateX(-50%);
-  }
-  &__hero {
-    height: calc(100vh - 4rem - 40px - 40px); // minus padding, logo and scroll
-    align-content: center;
-  }
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
