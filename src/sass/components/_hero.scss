@@ -4,17 +4,20 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: auto;
 
   &__image {
     width: calc(100vw / 2 - 1.2rem);
     height: 50vw;
     display: inline-block;
+    background: no-repeat center;
+    background-size: contain;
     &--left {
-      background-color: red;
+      background-image: url("../images/doodles-left.svg");
+      transform: translateX(0.5rem);
     }
     &--right {
-      background-color: rebeccapurple;
+      background-image: url("../images/doodles-right.svg");
+      transform: translateX(-0.5rem);
     }
   }
   &__content {
