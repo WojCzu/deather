@@ -1,6 +1,9 @@
 .section {
-  padding: 1rem;
+  padding: 0 1rem;
   &__title {
+    text-align: center;
+  }
+  &__description {
     text-align: center;
   }
 }

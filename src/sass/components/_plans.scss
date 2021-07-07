@@ -1,0 +1,62 @@
+@use '../abstracts' as *;
+@use 'sass:map';
+
+.plan {
+  background-color: $primary-color;
+  padding: 3rem 1rem 1rem;
+  margin: 3rem auto 1rem;
+  border-radius: 1rem;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 5rem;
+    height: 5rem;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    transform: translateY(-33.33%);
+    background: url("../images/card1-logo.svg") no-repeat center;
+    background-size: contain;
+  }
+
+  &:nth-child(2n) {
+    background-color: $secondary-color;
+    &::before {
+      background-image: url("../images/card2-logo.svg");
+    }
+  }
+
+  &__title,
+  &__price {
+    color: map.get($text-colors, "primary-light");
+  }
+
+  &__description,
+  &__offer,
+  &__period {
+    color: map.get($text-colors, "secondary-light");
+  }
+
+  &__price {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+  }
+
+  &__period {
+    vertical-align: super;
+    font-size: 1rem;
+    margin-left: -0.5rem;
+  }
+  &__offer {
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.offer {
+  &__item:before {
+    content: "- ";
+  }
+}
