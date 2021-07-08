@@ -1,0 +1,11 @@
+@use '../abstracts' as *;
+@use 'sass:map';
+
+.btn {
+  @include interactable($secondary-color);
+  padding: 0.5em;
+  color: map-get($text-colors, "primary-light");
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+}

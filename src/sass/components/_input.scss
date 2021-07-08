@@ -1,0 +1,14 @@
+@use '../abstracts' as *;
+@use 'sass:map';
+
+.input {
+  @include interactable($primary-color);
+  padding: 0.75em 1.5em;
+  color: map-get($text-colors, "secondary-light");
+  &::placeholder {
+    color: mix(map-get($text-colors, "secondary-light"), $primary-color, 80%);
+  }
+  &:focus::placeholder {
+    color: mix(map-get($text-colors, "secondary-dark"), $primary-color, 80%);
+  }
+}

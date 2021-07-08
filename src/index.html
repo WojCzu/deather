@@ -139,8 +139,14 @@
         <h2 class="section__title">Get notified when we launch</h2>
         <div class="section__content notification">
           <form class="notification__form">
-            <label for="email" class="notification__label">Email:</label>
-            <input type="email" name="email" class="notification__input" />
+            <label for="email" class="notification__label hide">Email:</label>
+            <input
+              class="notification__input input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="example@email.com"
+            />
             <button type="submit" class="notification__btn btn">
               get notified
             </button>

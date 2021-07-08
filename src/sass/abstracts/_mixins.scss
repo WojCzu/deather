@@ -1,0 +1,13 @@
+@mixin interactable($color) {
+  display: block;
+  margin: 1em 0;
+  border: 2px solid transparent;
+  border-radius: 2em;
+  background-color: $color;
+  outline: none;
+  &:focus {
+    background-color: mix(white, $color, 80%);
+    color: $color;
+    border-color: $color;
+  }
+}
