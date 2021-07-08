@@ -1,0 +1,22 @@
+@use '../abstracts' as *;
+@use 'sass:map';
+
+.footer {
+  margin-top: 3rem;
+  padding: 1.5rem 1rem;
+  background-color: $secondary-color;
+  border-radius: 1rem 1rem 0 0;
+  &__credit {
+    font-size: 0.75rem;
+    margin-top: 1em;
+    color: map.get($text-colors, "secondary-light");
+    &:nth-child(1) {
+      margin-top: 0;
+    }
+  }
+  &__link {
+    color: map.get($text-colors, "primary-light");
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
