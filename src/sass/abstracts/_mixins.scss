@@ -1,3 +1,11 @@
+@use 'sass:map';
+
+$breakpoints: (
+  small: 550px,
+  medium: 1100px,
+  large: 1500px,
+);
+
 @mixin interactable($color) {
   display: block;
   margin: 1em 0;
@@ -9,5 +17,13 @@
     background-color: mix(white, $color, 80%);
     color: $color;
     border-color: $color;
+  }
+}
+
+@mixin mq($key) {
+  $size: map-get($breakpoints, $key);
+
+  @media (min-width: $size) {
+    @content;
   }
 }

@@ -1,7 +1,21 @@
+@use '../abstracts' as *;
 .header {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  &__logo {
+    margin: 1rem;
+  }
+  &__hero {
+    align-items: center;
+  }
+
+  @include mq(small) {
+    &__logo {
+      align-self: flex-start;
+      margin-left: 2rem;
+    }
+  }
 }

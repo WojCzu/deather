@@ -1,4 +1,4 @@
-@use '../abstracts/colors' as *;
+@use '../abstracts' as *;
 
 .hero {
   height: 70vh;
@@ -6,6 +6,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-content: space-around;
+  justify-content: center;
 
   &__image {
     width: 50vw;
@@ -30,15 +31,18 @@
 
 .header-text {
   text-align: center;
-  width: 100%;
+  width: 80vw;
   &__main {
-    width: 60vw;
+    width: 85%;
     em {
       font-style: normal;
       color: $secondary-color;
     }
   }
   &__side {
-    width: 85vw;
+    width: 100%;
+  }
+  @include mq(small) {
+    width: 55vw;
   }
 }
