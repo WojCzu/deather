@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  overflow: hidden;
   &__logo {
     margin: 1rem;
   }
@@ -16,6 +17,11 @@
     &__logo {
       align-self: flex-start;
       margin-left: 2rem;
+    }
+  }
+  @include mq(medium) {
+    &__logo {
+      margin-left: 5rem;
     }
   }
 }
