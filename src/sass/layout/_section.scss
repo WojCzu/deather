@@ -12,4 +12,7 @@
     width: clamp(500px, 90vw, 600px);
     margin: 0 auto;
   }
+  @include mq(medium) {
+    width: clamp(800px, 90vw, 1200px);
+  }
 }

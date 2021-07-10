@@ -5,6 +5,34 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  @include mq(small) {
+    &__item {
+      &:nth-of-type(2n) {
+        transform: translate(2rem, 0);
+      }
+      &:nth-of-type(2n-1) {
+        transform: translate(-2rem, 0);
+      }
+    }
+  }
+  @include mq(medium) {
+    margin-top: 6rem;
+    &__list {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &__item {
+      max-width: 20%;
+      &:nth-of-type(2n) {
+        transform: translate(0, 2rem);
+      }
+      &:nth-of-type(2n-1) {
+        transform: translate(0, -2rem);
+      }
+    }
   }
 }
 
@@ -38,12 +66,6 @@
   }
   @include mq(small) {
     flex-direction: row;
-    &:nth-of-type(2n) {
-      transform: translate(2rem, 0);
-    }
-    &:nth-of-type(2n-1) {
-      transform: translate(-2rem, 0);
-    }
     &__name {
       text-align: left;
     }
@@ -53,6 +75,16 @@
     &__text-container {
       margin-left: 1rem;
       max-width: 100%;
+    }
+  }
+  @include mq(medium) {
+    flex-direction: column;
+    align-items: flex-start;
+    &__image-container {
+      font-size: 20px;
+    }
+    &__text-container {
+      margin-left: 0;
     }
   }
 }
