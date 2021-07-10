@@ -8,7 +8,8 @@
   border-radius: 1rem 1rem 0 0;
   &__credit {
     font-size: 0.75rem;
-    margin-top: 1em;
+    margin: 1em auto 0;
+    max-width: 600px;
     color: map.get($text-colors, "secondary-light");
     &:nth-child(1) {
       margin-top: 0;

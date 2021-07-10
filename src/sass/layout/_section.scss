@@ -9,7 +9,7 @@
     text-align: center;
   }
   @include mq(small) {
-    width: clamp(500px, 90vw, 700px);
+    width: clamp(500px, 90vw, 600px);
     margin: 0 auto;
   }
 }
