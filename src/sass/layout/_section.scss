@@ -1,3 +1,5 @@
+@use '../abstracts' as *;
+
 .section {
   padding: 0 1rem;
   &__title {
@@ -5,5 +7,9 @@
   }
   &__description {
     text-align: center;
+  }
+  @include mq(small) {
+    width: clamp(500px, 90vw, 700px);
+    margin: 0 auto;
   }
 }

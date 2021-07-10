@@ -17,6 +17,7 @@
     text-align: center;
   }
   &__image-container {
+    flex-shrink: 0;
     font-size: 16px;
     width: 8em;
     height: 8em;
@@ -31,5 +32,27 @@
   &__description {
     text-align: center;
     margin-top: 0;
+  }
+  &__text-container {
+    max-width: 80%;
+  }
+  @include mq(small) {
+    flex-direction: row;
+    &:nth-of-type(2n) {
+      transform: translate(1rem, 0);
+    }
+    &:nth-of-type(2n-1) {
+      transform: translate(-1rem, 0);
+    }
+    &__name {
+      text-align: left;
+    }
+    &__description {
+      text-align: left;
+    }
+    &__text-container {
+      margin-left: 1rem;
+      max-width: 100%;
+    }
   }
 }
