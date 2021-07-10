@@ -25,4 +25,10 @@
       width: 30%;
     }
   }
+  @include mq(medium) {
+    &__form {
+      max-width: 900px;
+      margin: auto;
+    }
+  }
 }
