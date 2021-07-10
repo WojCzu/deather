@@ -19,32 +19,32 @@ h1 {
   font-size: 2.5rem;
   margin: 0.7em auto;
   @include mq(medium) {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 }
 
 h2 {
   font-size: 1.5rem;
-  margin: 0.9em auto;
+  margin: 0.9em 0;
   @include mq(medium) {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 }
 
 h3 {
   font-size: 1rem;
-  margin: 0.7em auto;
+  margin: 0.7em 0;
   @include mq(medium) {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 }
 p {
   color: map.get($text-colors, "secondary-dark");
   font-size: 1rem;
-  margin: 1em auto;
+  margin: 1em 0;
 }
 button {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  font-weight: 700;
+  letter-spacing: 0.12rem;
 }

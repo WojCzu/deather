@@ -11,24 +11,25 @@
   &__form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
   }
   @include mq(small) {
     &__form {
       flex-direction: row;
     }
-    &__input {
-      width: 60%;
+    &__input.input {
+      margin-right: 1rem;
     }
     &__btn {
-      width: 30%;
+      width: fit-content;
     }
   }
   @include mq(medium) {
     &__form {
-      max-width: 900px;
+      max-width: 800px;
       margin: auto;
+    }
+    &__input.input {
+      margin-right: 1.5rem;
     }
   }
 }
