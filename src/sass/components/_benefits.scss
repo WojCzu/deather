@@ -52,6 +52,10 @@
     border-radius: 2em;
     padding: 0.8em;
     background-color: $primary-color;
+
+    .dark-mode & {
+      background-color: $primary-color-dark-mode;
+    }
   }
   &__image {
     width: 100%;

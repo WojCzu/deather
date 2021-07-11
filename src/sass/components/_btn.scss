@@ -3,8 +3,12 @@
 
 .btn {
   @include interactable($secondary-color);
-  padding: 0.5em 1em;
   color: map-get($text-colors, "primary-light");
+  .dark-mode & {
+    @include interactable($secondary-color-dark-mode);
+    color: map-get($text-colors, "primary-light-dark-mode");
+  }
+  padding: 0.5em 1em;
   text-transform: uppercase;
   text-align: center;
   cursor: pointer;

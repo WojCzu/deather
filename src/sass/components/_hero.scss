@@ -17,10 +17,16 @@
     &--left {
       background-image: url("../images/doodles-left.svg");
       transform: translateX(0.2rem);
+      .dark-mode & {
+        background-image: url("../images/doodles-left-dark-mode.svg");
+      }
     }
     &--right {
       background-image: url("../images/doodles-right.svg");
       transform: translateX(-0.2rem);
+      .dark-mode & {
+        background-image: url("../images/doodles-right-dark-mode.svg");
+      }
     }
   }
   &__content {
@@ -51,6 +57,9 @@
     em {
       font-style: normal;
       color: $secondary-color;
+      .dark-mode & {
+        color: $secondary-color-dark-mode;
+      }
     }
   }
   &__side {

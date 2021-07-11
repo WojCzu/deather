@@ -20,4 +20,10 @@
     font-weight: 700;
     text-decoration: none;
   }
+  .dark-mode & {
+    background-color: $primary-color-dark-mode;
+    &__link {
+      color: map.get($text-colors, "primary-light-dark-mode");
+    }
+  }
 }

@@ -12,6 +12,9 @@
 }
 .plan {
   background-color: $primary-color;
+  .dark-mode & {
+    background-color: $primary-color-dark-mode;
+  }
   padding: 3rem 2rem 1rem;
   margin: 2rem 0;
   border-radius: 1rem;
@@ -29,24 +32,40 @@
     transform: translateY(-33.33%);
     background: url("../images/card1-logo.svg") no-repeat center;
     background-size: contain;
+    .dark-mode & {
+      background: url("../images/card1-logo-dark-mode.svg") no-repeat center;
+      background-size: contain;
+    }
   }
 
   &:nth-child(2n) {
     background-color: $secondary-color;
+    .dark-mode & {
+      background-color: $secondary-color-dark-mode;
+    }
     &::before {
       background-image: url("../images/card2-logo.svg");
+      .dark-mode & {
+        background-image: url("../images/card2-logo-dark-mode.svg");
+      }
     }
   }
 
   &__title,
   &__price {
     color: map.get($text-colors, "primary-light");
+    .dark-mode & {
+      color: map.get($text-colors, "primary-light-dark-mode");
+    }
   }
 
   &__description,
   &__offer,
   &__period {
     color: map.get($text-colors, "secondary-light");
+    .dark-mode & {
+      color: map.get($text-colors, "secondary-light");
+    }
   }
 
   &__price {
