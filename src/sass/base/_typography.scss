@@ -13,6 +13,9 @@ h2,
 h3 {
   font-weight: 700;
   color: map.get($text-colors, "primary-dark");
+  .dark-mode & {
+    color: map.get($text-colors, "primary-light-dark-mode");
+  }
 }
 
 h1 {
@@ -42,6 +45,9 @@ p {
   color: map.get($text-colors, "secondary-dark");
   font-size: 1rem;
   margin: 1em 0;
+  .dark-mode & {
+    color: map.get($text-colors, "secondary-dark-dark-mode");
+  }
 }
 button {
   font-family: "Roboto", sans-serif;

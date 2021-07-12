@@ -1,4 +1,4 @@
-@use '../abstracts/colors' as *;
+@use '../abstracts' as *;
 
 .scroll-down {
   width: 24px;
@@ -7,6 +7,9 @@
   border-radius: 12px;
   display: flex;
   justify-content: center;
+  .dark-mode & {
+    border-color: $secondary-color-dark-mode;
+  }
 
   &::after {
     content: "";
@@ -16,5 +19,8 @@
     border: 2px solid $secondary-color;
     border-radius: 50%;
     transform: translateY(3px);
+    .dark-mode & {
+      border-color: $secondary-color-dark-mode;
+    }
   }
 }

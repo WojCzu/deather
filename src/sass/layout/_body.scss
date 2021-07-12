@@ -1,0 +1,8 @@
+@use '../abstracts' as *;
+
+body {
+  background-color: $bg-color;
+  &.dark-mode {
+    background-color: $bg-color-dark-mode;
+  }
+}
