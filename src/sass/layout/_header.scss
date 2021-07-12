@@ -6,22 +6,28 @@
   justify-content: space-around;
   align-items: center;
   overflow: hidden;
-  &__logo {
-    margin: 1rem;
-  }
   &__hero {
     align-items: center;
   }
-
+  &__bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+  }
+  &__utils {
+    margin: 0;
+  }
   @include mq(small) {
-    &__logo {
-      align-self: flex-start;
-      margin-left: 2rem;
+    &__bar {
+      padding: 0 2rem;
+      z-index: 1;
     }
   }
   @include mq(medium) {
-    &__logo {
-      margin-left: 5rem;
+    &__bar {
+      padding: 0 5rem;
     }
   }
 }
