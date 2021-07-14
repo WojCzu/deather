@@ -1,5 +1,5 @@
 import "./sass/style.scss";
-import Utils from "./code/utils";
+import DarkMode from "./code/darkMode";
 
-const utils = new Utils();
-utils.startDarkMode();
+const darkMode = new DarkMode();
+darkMode.start();
